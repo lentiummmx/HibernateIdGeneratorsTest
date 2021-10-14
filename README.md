@@ -1,0 +1,1 @@
+# Hibernate Id Generators Testing 
