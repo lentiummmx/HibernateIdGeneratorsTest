@@ -1,18 +1,14 @@
 package mx.com.xoco.nuniez.entities;
 
 import lombok.Data;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Parameter;
-import org.hibernate.id.SelectGenerator;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "edu_course")
 @Data
-public class EduCourse {
+@MappedSuperclass
+public abstract class NoIdBaseCourse {
 
-    @Id
+//    @Id
 /* TableGenerator - JPA - Initial approach */
 //    @TableGenerator(
 //            name = "course_gen",
@@ -68,20 +64,20 @@ public class EduCourse {
 //            }
 //    )
 /* SequenceStyleGenerator - like table generator spec v2 */
-    @GeneratedValue(generator = "edu_course_id_seq_gen")
-    @GenericGenerator (
-            name = "edu_course_id_seq_gen",
-            strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
-            parameters = {
-                    @Parameter(name = "sequence_name", value = "edu_course_id_seq"),
-                    @Parameter(name = "initial_value", value = "5"),
-                    @Parameter(name = "increment_size", value = "1"),
-                    //@Parameter(name = "force_table_use", value = "true"),
-                    //@Parameter(name = "value_column", value = "cur_val"),
-                    @Parameter(name = "prefer_sequence_per_entity", value = "true"),
-                    //@Parameter(name = "sequence_per_entity_suffix", value = "_seq"),
-            }
-    )
+//    @GeneratedValue(generator = "edu_course_id_seq_gen")
+//    @GenericGenerator (
+//            name = "edu_course_id_seq_gen",
+//            strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
+//            parameters = {
+//                    @Parameter(name = "sequence_name", value = "edu_course_id_seq"),
+//                    @Parameter(name = "initial_value", value = "5"),
+//                    @Parameter(name = "increment_size", value = "1"),
+//                    //@Parameter(name = "force_table_use", value = "true"),
+//                    //@Parameter(name = "value_column", value = "cur_val"),
+//                    @Parameter(name = "prefer_sequence_per_entity", value = "true"),
+//                    //@Parameter(name = "sequence_per_entity_suffix", value = "_seq"),
+//            }
+//    )
 /* TableGenerator - HBNT */
 //    @GeneratedValue(generator = "edu_course_id_seq_gen")
 //    @GenericGenerator (
@@ -95,7 +91,8 @@ public class EduCourse {
 //                    @org.hibernate.annotations.Parameter(name = "value_column_name", value = "cur_value"),
 //            }
 //    )
-    private int id;
+//    @Access(AccessType.PROPERTY)
+//    private int id;
 
     @Column(name = "course_name")
     private String courseName;
