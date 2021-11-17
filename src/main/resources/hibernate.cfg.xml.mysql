@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/hibernate
+        </property>
+        <property name="hibernate.connection.username">hibernate</property>
+        <property name="hibernate.connection.password">hbrnt_password</property>
+        <property name="hibernate.connection.pool_size">10</property>
+        <property name="show_sql">true</property>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <!--<property name="hibernate.hbm2ddl.auto">create</property>-->
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+        <mapping class="mx.com.xoco.nuniez.entities.EduCourse"/>
+        <mapping class="mx.com.xoco.nuniez.entities.IdStrategyCourse"/>
+        <mapping class="mx.com.xoco.nuniez.entities.SeqStrategyCourse"/>
+        <mapping class="mx.com.xoco.nuniez.entities.Book"/>
+        <mapping class="mx.com.xoco.nuniez.entities.InfoId"/>
+        <mapping class="mx.com.xoco.nuniez.entities.InfoLine"/>
+        <mapping class="mx.com.xoco.nuniez.entities.Order"/>
+        <mapping class="mx.com.xoco.nuniez.entities.WebResource"/>
+        <mapping class="mx.com.xoco.nuniez.entities.Z11116.UserConnection"/>
+    </session-factory>
+</hibernate-configuration>

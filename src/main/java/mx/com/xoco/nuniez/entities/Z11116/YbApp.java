@@ -1,8 +1,7 @@
-package mx.com.xoco.nuniez;
+package mx.com.xoco.nuniez.entities.Z11116;
 
 import mx.com.xoco.nuniez.config.HibernateUtil;
 import mx.com.xoco.nuniez.entities.*;
-import mx.com.xoco.nuniez.entities.Z11116.UserConnection;
 import org.hibernate.Session;
 
 import java.net.MalformedURLException;
@@ -13,13 +12,14 @@ import java.util.Random;
  * Hello world!
  *
  */
-public class App 
+public class YbApp
 {
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
 
         Session session = HibernateUtil.getSession();
+/*
 
         session.beginTransaction();
 
@@ -31,7 +31,9 @@ public class App
 
         session.getTransaction().commit();
 
-        /*===================================================================-*/
+        */
+/*===================================================================-*//*
+
 
         session.beginTransaction();
 
@@ -43,7 +45,9 @@ public class App
 
         session.getTransaction().commit();
 
-        /*===================================================================-*/
+        */
+/*===================================================================-*//*
+
 
         session.beginTransaction();
 
@@ -55,7 +59,9 @@ public class App
 
         session.getTransaction().commit();
 
-        /*===================================================================-*/
+        */
+/*===================================================================-*//*
+
 
         session.beginTransaction();
 
@@ -70,7 +76,9 @@ public class App
 
         session.getTransaction().commit();
 
-        /*===================================================================-*/
+        */
+/*===================================================================-*//*
+
 
         session.beginTransaction();
 
@@ -80,7 +88,9 @@ public class App
 
         session.getTransaction().commit();
 
-        /*===================================================================-*/
+        */
+/*===================================================================-*//*
+
 
         session.beginTransaction();
 
@@ -92,7 +102,9 @@ public class App
 
         session.getTransaction().commit();
 
-        /*===================================================================-*/
+        */
+/*===================================================================-*//*
+
 
         session.beginTransaction();
 
@@ -103,7 +115,9 @@ public class App
 
         session.getTransaction().commit();
 
-        /*===================================================================-*/
+        */
+/*===================================================================-*//*
+
 
         session.beginTransaction();
 
@@ -113,6 +127,7 @@ public class App
         System.out.println("infoLine <> " + infoLine);
 
         session.getTransaction().commit();
+*/
 
         /*===================================================================-*/
 
@@ -120,9 +135,9 @@ public class App
 
         UserConnection usrConn = new UserConnection(
                 new UserConnection.UserConnectionId(
-                        123456789L,
-                        "qwerty",
-                        "q1w2e3r4t5y6u7i8o9"
+                        345678901L,
+                        "zxcvbn",
+                        "z3x4c5v6b7n8m9,0.1"
                 ),
                 1,
                 "asdfgh",
@@ -133,7 +148,7 @@ public class App
                 "rfvtgb",
                 5000L
         );
-        session.persist(usrConn);
+        session.saveOrUpdate(usrConn);
         System.out.println("usrConn <> " + usrConn);
 
         session.getTransaction().commit();

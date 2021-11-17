@@ -9,8 +9,7 @@
         <property name="hibernate.connection.pool_size">10</property>
         <property name="hibernate.default_schema">api_db_domestic</property>
         <property name="show_sql">true</property>
-        <!--<property name="dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>-->
-        <property name="dialect">mx.com.xoco.nuniez.entities.Z11116.CustomPostgresqlDialect</property>
+        <property name="dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
         <!--<property name="hibernate.hbm2ddl.auto">create</property>-->
         <!--<property name="hibernate.hbm2ddl.auto">update</property>-->
         <property name="hibernate.hbm2ddl.auto">validate</property>
